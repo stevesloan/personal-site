@@ -1,7 +1,36 @@
-/* 
+/*
 The main SCSS file for everything, yep
 */
 
-@import "poole";
-@import "syntax";
-@import "lanyon";
+//@import "poole";
+//@import "syntax";
+//@import "lanyon";
+@import "variables";
+@import "mixins";
+
+
+.sidebar {
+
+
+  @include md {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  @include lg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}
+.main {
+  @include lg {
+    margin-left: 50%;
+
+  }
+
+  @include md {
+    margin-left: 33.333%;
+
+  }
+}
