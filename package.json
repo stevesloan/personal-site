@@ -1,11 +1,8 @@
 {
-  "name": "jekylltest",
+  "name": "personal-site",
   "private": true,
-  "version": "0.0.0",
-  "description": "Yeoman workflow for jekyllTest",
-  "dependencies": {
-    "normalize.css": "^3.0.3"
-  },
+  "version": "1.0.0",
+  "description": "Personal Site for stevesloan.ca",
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "del": "^1.1.1",

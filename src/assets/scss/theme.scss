@@ -1,0 +1,27 @@
+.sidebar {
+  background-color:#4B3A72;
+  color:white;
+
+  @include md {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  @include lg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.main {
+  @include lg {
+    margin-left: 50%;
+
+  }
+
+  @include md {
+    margin-left: 33.333%;
+
+  }
+}

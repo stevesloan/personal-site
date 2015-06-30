@@ -1,16 +1,19 @@
 /*
 The main SCSS file for everything, yep
 */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0; } }
-@media (min-width: 1024px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0; } }
+.sidebar {
+  background-color: #4B3A72;
+  color: white; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0; } }
+  @media (min-width: 1024px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0; } }
 
 @media (min-width: 1024px) {
   .main {
@@ -18,3 +21,21 @@ The main SCSS file for everything, yep
 @media (min-width: 768px) and (max-width: 1023px) {
   .main {
     margin-left: 33.333%; } }
+
+.m2 {
+  margin: 20px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .m2 {
+      margin: 40px; } }
+  @media (min-width: 1024px) {
+    .m2 {
+      margin: 50px; } }
+
+.p2 {
+  padding: 20px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .p2 {
+      padding: 40px; } }
+  @media (min-width: 1024px) {
+    .p2 {
+      padding: 50px; } }

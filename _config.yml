@@ -1,8 +1,8 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: jekyllTest
-description: my first site
-tagline: Steve is great
+title: Steve Sloan
+description: Steve Sloan
+tagline: What a site!
 url: localhost:4000
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
@@ -14,8 +14,8 @@ destination: serve
 author:
   name: Steve
   email: sloan.steve@gmail.com
-  bio: im great
-  twitter: 
+  bio:
+  twitter: sloansteve
 
 # general setting for Jekyll
 googleAnalytics: UA-XXXXX-X

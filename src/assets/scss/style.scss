@@ -7,30 +7,23 @@ The main SCSS file for everything, yep
 //@import "lanyon";
 @import "variables";
 @import "mixins";
+@import "theme";
 
-
-.sidebar {
-
-
+.m2 {
+  margin:20px;
   @include md {
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    margin:40px;
   }
   @include lg {
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    margin:50px;
   }
 }
-.main {
-  @include lg {
-    margin-left: 50%;
-
-  }
-
+.p2 {
+  padding:20px;
   @include md {
-    margin-left: 33.333%;
-
+    padding:40px;
+  }
+  @include lg {
+    padding:50px;
   }
 }

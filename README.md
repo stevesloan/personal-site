@@ -1,3 +1,3 @@
-# jekyllTest
+# Personal Site
 
-[Describe the project.]
+[My personal site for stevesloan.ca]
