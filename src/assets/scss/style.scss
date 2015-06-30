@@ -3,7 +3,7 @@ The main SCSS file for everything, yep
 */
 
 //@import "poole";
-//@import "syntax";
+@import "syntax";
 //@import "lanyon";
 @import "variables";
 @import "mixins";
@@ -12,18 +12,18 @@ The main SCSS file for everything, yep
 .m2 {
   margin:20px;
   @include md {
-    margin:40px;
+    margin:60px;
   }
   @include lg {
-    margin:50px;
+    margin:120px;
   }
 }
 .p2 {
   padding:20px;
   @include md {
-    padding:40px;
+    padding:60px;
   }
   @include lg {
-    padding:50px;
+    padding:15%;
   }
 }

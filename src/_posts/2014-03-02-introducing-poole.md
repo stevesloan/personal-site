@@ -10,6 +10,19 @@ investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward
 Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole,
 Dr. Jekyll's loyal butler.
 
+{% highlight javascript %}
+var test = 'dfs';
+var test3 = function(fdsf){
+
+};
+
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
 -----
 
 Poole is the butler for [Jekyll](http://jekyllrb.com), the static site

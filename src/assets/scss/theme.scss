@@ -1,6 +1,7 @@
 .sidebar {
   background-color:#4B3A72;
   color:white;
+  will-change:transform;
 
   @include md {
     position: fixed;
