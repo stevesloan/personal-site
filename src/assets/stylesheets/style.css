@@ -189,6 +189,9 @@ The main SCSS file for everything, yep
 .css .o, .css .o + .nt, .css .nt + .nt {
   color: #999; }
 
+.pure-g, .pure-g [class*="pure-u"] {
+  font-family: "Noto Sans"; }
+
 .sidebar {
   background-color: #4B3A72;
   color: white;
@@ -211,6 +214,28 @@ The main SCSS file for everything, yep
   .main {
     margin-left: 33.333%; } }
 
+.sidebar a {
+  color: #fff; }
+  .sidebar a:active, .sidebar a:focus, .sidebar a:visited {
+    color: #fff; }
+
+nav.sidebar-nav a {
+  font-size: .9em;
+  display: inline-block;
+  padding-bottom: 0.9em;
+  margin-right: 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+  nav.sidebar-nav a.active {
+    border-bottom: 3px solid #2AF4FD; }
+
+.post-title {
+  margin-top: 0;
+  padding: 0;
+  line-height: 1em;
+  text-transform: uppercase; }
+
 .m2 {
   margin: 20px; }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -227,4 +252,4 @@ The main SCSS file for everything, yep
       padding: 60px; } }
   @media (min-width: 1024px) {
     .p2 {
-      padding: 15%; } }
+      padding: 12% 14%; } }
