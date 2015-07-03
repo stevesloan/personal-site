@@ -1,16 +1,10 @@
 ---
-layout: default
-title: About
+layout: page
+title: Blog
 ---
 
-The Strange Case of Dr. Jeykll and Mr. Hyde* tells the story of a lawyer
-investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward
-Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole,
-Dr. Jekyll's loyal butler.
-
-<!--
 <div class="posts">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
@@ -43,10 +37,3 @@ Dr. Jekyll's loyal butler.
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
--->
-
-{% contentfor sidebar %}
-* Some content
-* in a markdown list
-* with some {{ 'liquid' }} tags too!
-{% endcontentfor %}
