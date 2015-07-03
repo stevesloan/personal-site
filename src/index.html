@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: Home
 ---
 
 <div class="posts">
@@ -37,3 +37,9 @@ title: About
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+
+{% contentfor sidebar %}
+* Some content
+* in a markdown list
+* with some {{ 'liquid' }} tags too!
+{% endcontentfor %}
