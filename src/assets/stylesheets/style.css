@@ -189,53 +189,6 @@ The main SCSS file for everything, yep
 .css .o, .css .o + .nt, .css .nt + .nt {
   color: #999; }
 
-.pure-g, .pure-g [class*="pure-u"] {
-  font-family: "Noto Sans"; }
-
-.sidebar {
-  background-color: #4B3A72;
-  color: white;
-  will-change: transform; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .sidebar {
-      position: fixed;
-      top: 0;
-      bottom: 0; } }
-  @media (min-width: 1024px) {
-    .sidebar {
-      position: fixed;
-      top: 0;
-      bottom: 0; } }
-
-@media (min-width: 1024px) {
-  .main {
-    margin-left: 50%; } }
-@media (min-width: 768px) and (max-width: 1023px) {
-  .main {
-    margin-left: 33.333%; } }
-
-.sidebar a {
-  color: #fff; }
-  .sidebar a:active, .sidebar a:focus, .sidebar a:visited {
-    color: #fff; }
-
-nav.sidebar-nav a {
-  font-size: .9em;
-  display: inline-block;
-  padding-bottom: 0.9em;
-  margin-right: 3em;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
-  nav.sidebar-nav a.active {
-    border-bottom: 3px solid #2AF4FD; }
-
-.post-title {
-  margin-top: 0;
-  padding: 0;
-  line-height: 1em;
-  text-transform: uppercase; }
-
 .m2 {
   margin: 20px; }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -245,11 +198,90 @@ nav.sidebar-nav a {
     .m2 {
       margin: 120px; } }
 
-.p2 {
+.p2, .sidebar__botom {
   padding: 20px; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .p2 {
+    .p2, .sidebar__botom {
       padding: 60px; } }
   @media (min-width: 1024px) {
-    .p2 {
-      padding: 12% 14%; } }
+    .p2, .sidebar__botom {
+      padding: 100px; } }
+
+.pure-g, .pure-g [class*="pure-u"] {
+  font-family: "Noto Sans"; }
+
+@media (min-width: 1024px) {
+  .main {
+    margin-left: 50%; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    margin-left: 33.333%; } }
+
+.sidebar {
+  background-image: url('../images/bg.svg');
+  background-color: #4B3A72;
+  background-size: cover;
+  color: white;
+  will-change: transform;
+  text-align: center; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar {
+      text-align: left;
+      position: fixed;
+      top: 0;
+      bottom: 0; } }
+  @media (min-width: 1024px) {
+    .sidebar {
+      text-align: left;
+      position: fixed;
+      top: 0;
+      bottom: 0; } }
+  .sidebar a {
+    color: #fff; }
+    .sidebar a:active, .sidebar a:focus, .sidebar a:visited {
+      color: #fff; }
+  .sidebar__nav a {
+    font-size: .9em;
+    display: inline-block;
+    padding-bottom: 0.9em;
+    margin-right: 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+    .sidebar__nav a.active {
+      border-bottom: 3px solid #2AF4FD; }
+  .sidebar__botom {
+    padding-left: 0;
+    padding-right: 0; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .sidebar__botom {
+        position: absolute;
+        bottom: 0; } }
+    @media (min-width: 1024px) {
+      .sidebar__botom {
+        position: absolute;
+        bottom: 0; } }
+  .sidebar__h1 {
+    font-size: 3em; }
+  .sidebar__social {
+    padding-right: 2em; }
+
+.logo {
+  margin: 50px auto;
+  width: 70px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .logo {
+      margin-top: 45px;
+      position: absolute;
+      right: -38px; } }
+  @media (min-width: 1024px) {
+    .logo {
+      margin-top: 85px;
+      position: absolute;
+      right: -38px; } }
+
+.post-title {
+  margin-top: 0;
+  padding: 0;
+  line-height: 1em;
+  text-transform: uppercase; }

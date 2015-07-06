@@ -1,0 +1,18 @@
+.m2 {
+  margin:20px;
+  @include md {
+    margin:60px;
+  }
+  @include lg {
+    margin:120px;
+  }
+}
+.p2 {
+  padding:20px;
+  @include md {
+    padding:60px;
+  }
+  @include lg {
+    padding:100px;
+  }
+}

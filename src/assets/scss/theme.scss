@@ -3,23 +3,6 @@
   //font-family: "Raleway";
 }
 
-.sidebar {
-  background-color:#4B3A72;
-  color:white;
-  will-change:transform;
-
-  @include md {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-  @include lg {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-}
-
 .main {
   @include lg {
     margin-left: 50%;
@@ -32,26 +15,101 @@
   }
 }
 
-.sidebar a {
-  color:$c-white;
-  &:active, &:focus, &:visited {
+.sidebar {
+  background-image:url('../images/bg.svg');
+  background-color:#4B3A72;
+  background-size:cover;
+
+  color:white;
+  will-change:transform;
+  text-align:center;
+
+  @include md {
+    text-align:left;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  @include lg {
+    text-align:left;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+
+
+
+
+  a {
     color:$c-white;
+    &:active, &:focus, &:visited {
+      color:$c-white;
+    }
+  }
+
+
+  &__nav {
+    //display:block;
+   a {
+      font-size:.9em;
+      display:inline-block;
+      padding-bottom:0.9em;
+      margin-right:3em;
+      text-decoration:none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      &.active {
+        border-bottom:3px solid $c-primary;
+      }
+    }
+  }
+
+  &__botom{
+    @extend .p2;
+    padding-left:0;
+    padding-right:0;
+
+    @include md {
+      position:absolute;
+      bottom:0;
+    }
+    @include lg {
+      position:absolute;
+      bottom:0;
+    }
+
+  }
+
+  &__h1 {
+    font-size:3em;
+
+  }
+
+  &__social {
+    padding-right:2em;
+
+  }
+
+}
+
+.logo {
+  margin: 50px auto;
+  width:70px;
+  @include md {
+    margin-top:45px;
+    position:absolute;
+    right:-38px;
+
+  }
+  @include lg {
+    margin-top:85px;
+    position:absolute;
+    right:-38px;
   }
 }
 
-nav.sidebar-nav a {
-  font-size:.9em;
-  display:inline-block;
-  padding-bottom:0.9em;
-  margin-right:3em;
-  text-decoration:none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 
-  &.active {
-    border-bottom:3px solid $c-primary;
-  }
-}
 
 .post-title {
   margin-top:0;

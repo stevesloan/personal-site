@@ -7,23 +7,5 @@ The main SCSS file for everything, yep
 //@import "lanyon";
 @import "variables";
 @import "mixins";
+@import "box";
 @import "theme";
-
-.m2 {
-  margin:20px;
-  @include md {
-    margin:60px;
-  }
-  @include lg {
-    margin:120px;
-  }
-}
-.p2 {
-  padding:20px;
-  @include md {
-    padding:60px;
-  }
-  @include lg {
-    padding:12% 14%;
-  }
-}

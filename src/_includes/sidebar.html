@@ -1,7 +1,7 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
- <nav class="sidebar-nav">
-   <a class="sidebar-nav-item{% if page.title == "About" %} active{% endif %}" href="/">About</a>
+ <nav class="sidebar__nav">
+   <a class="sidebar__nav-item{% if page.title == "About" %} active{% endif %}" href="/">About</a>
 
    {% comment %}
      The code below dynamically generates a sidebar nav of pages with
@@ -20,23 +20,11 @@
 
  </nav>
 
- {% contentblock sidebar %}
-
-
- <span class="sidebar-nav-item">Run by <a href="https://twitter.com/{{ site.author.twitter}}">@{{ site.author.name }}<a/></span>
- <h3 class="masthead-title">
-   <a href="/" title="Home">{{ site.title }}</a>
-   <small>{{ site.tagline }}</small>
- </h3>
-
-
-<!-- Toggleable sidebar -->
-<div class="" id="sidebar">
-  <div class="sidebar-item">
-    <p>{{ site.description }}</p>
-  </div>
-
-
-
-
+<div class="sidebar__botom">
+  <aside>
+    {% contentblock sidebar %}
+  </aside>
+  <span class="sidebar__social"><a href="https://twitter.com/{{ site.author.twitter}}"><img src="" width="30" height="30"/></a></span>
+  <span class="sidebar__social"><a href="https://github.com/{{ site.author.github}}"><img src="" width="30" height="30"/></a></span>
+  <span class="sidebar__social"><a href="https://github.com/{{ site.author.github}}"><img src="" width="30" height="30"/></a></span>
 </div>
