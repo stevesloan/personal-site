@@ -49,26 +49,31 @@
 
 
   &__nav {
-    //display:block;
-   a {
+    z-index:100;
+    a {
       font-size:.9em;
       display:inline-block;
       padding-bottom:0.9em;
       margin-right:3em;
+      margin-bottom:1.5em;
       text-decoration:none;
       text-transform: uppercase;
       letter-spacing: 2px;
 
-      &.active {
-        border-bottom:3px solid $c-primary;
-      }
+
+
+    }
+    &--active {
+      border-bottom:3px solid $c-primary;
     }
   }
 
   &__botom{
+    z-index:1;
     @extend .p2;
     padding-left:0;
     padding-right:0;
+    padding-top:0;
 
     @include md {
       position:absolute;
@@ -109,12 +114,6 @@
   }
 }
 
-
-
-.post-title {
-  margin-top:0;
-  padding:0;
-  line-height:1em;
-  text-transform: uppercase;
-
+.page {
+  margin-top: -0.67em;
 }

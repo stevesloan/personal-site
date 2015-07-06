@@ -189,6 +189,13 @@ The main SCSS file for everything, yep
 .css .o, .css .o + .nt, .css .nt + .nt {
   color: #999; }
 
+/* typo */
+.page-title {
+  margin-top: 0;
+  padding: 0;
+  line-height: 1em;
+  text-transform: uppercase; }
+
 .m2 {
   margin: 20px; }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -240,19 +247,24 @@ The main SCSS file for everything, yep
     color: #fff; }
     .sidebar a:active, .sidebar a:focus, .sidebar a:visited {
       color: #fff; }
-  .sidebar__nav a {
-    font-size: .9em;
-    display: inline-block;
-    padding-bottom: 0.9em;
-    margin-right: 3em;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px; }
-    .sidebar__nav a.active {
+  .sidebar__nav {
+    z-index: 100; }
+    .sidebar__nav a {
+      font-size: .9em;
+      display: inline-block;
+      padding-bottom: 0.9em;
+      margin-right: 3em;
+      margin-bottom: 1.5em;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .sidebar__nav--active {
       border-bottom: 3px solid #2AF4FD; }
   .sidebar__botom {
+    z-index: 1;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    padding-top: 0; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .sidebar__botom {
         position: absolute;
@@ -280,8 +292,5 @@ The main SCSS file for everything, yep
       position: absolute;
       right: -38px; } }
 
-.post-title {
-  margin-top: 0;
-  padding: 0;
-  line-height: 1em;
-  text-transform: uppercase; }
+.page {
+  margin-top: -0.67em; }
