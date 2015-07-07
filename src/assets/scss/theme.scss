@@ -1,5 +1,7 @@
 .pure-g, .pure-g [class *="pure-u"]{
   font-family: "Noto Sans";
+  //font-family: "Lato";
+  font-size: 17px;
   //font-family: "Raleway";
 }
 
@@ -54,23 +56,34 @@
       font-size:.9em;
       display:inline-block;
       padding-bottom:0.9em;
-      margin-right:3em;
-      margin-bottom:1.5em;
+      margin:0 1.5em 1.5em 1.5em;;
       text-decoration:none;
       text-transform: uppercase;
       letter-spacing: 2px;
+      @include md {
 
-
+        margin-right:1em;
+      }
+      @include md {margin:0 1em 0 0;}
+      @include lg {margin:0 3em 0 0;}
 
     }
+
     &--active {
       border-bottom:3px solid $c-primary;
     }
   }
-
+  &__hero {
+    margin:0 auto;
+    display:block;
+    height: 50vh;
+    margin-bottom:-100px;
+  }
   &__botom{
     z-index:1;
     @extend .p2;
+
+
     padding-left:0;
     padding-right:0;
     padding-top:0;
@@ -78,10 +91,15 @@
     @include md {
       position:absolute;
       bottom:0;
+      font-size:0.8em;
+      padding-right:inherit;
+      width:80%;
     }
     @include lg {
       position:absolute;
       bottom:0;
+      padding-right:inherit;
+      width:80%;
     }
 
   }
@@ -92,23 +110,28 @@
   }
 
   &__social {
-    padding-right:2em;
-
+    padding:1em;
+    @include md {padding:0 2em 0 0;}
+    @include lg {padding:0 2em 0 0;}
+    img{
+      width:35px;
+      height:35px;
+    }
   }
 
 }
 
 .logo {
-  margin: 50px auto;
+  margin: 8% auto 0;
   width:70px;
   @include md {
-    margin-top:45px;
+    margin-top:8%;
     position:absolute;
     right:-38px;
 
   }
   @include lg {
-    margin-top:85px;
+    margin-top:6%;
     position:absolute;
     right:-38px;
   }

@@ -196,6 +196,14 @@ The main SCSS file for everything, yep
   line-height: 1em;
   text-transform: uppercase; }
 
+.page-content {
+  line-height: 2em;
+  font-weight: 400;
+  color: #666; }
+
+.slim {
+  font-weight: 100; }
+
 .m2 {
   margin: 20px; }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -206,16 +214,11 @@ The main SCSS file for everything, yep
       margin: 120px; } }
 
 .p2, .sidebar__botom {
-  padding: 20px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .p2, .sidebar__botom {
-      padding: 60px; } }
-  @media (min-width: 1024px) {
-    .p2, .sidebar__botom {
-      padding: 100px; } }
+  padding: 8% 10%; }
 
 .pure-g, .pure-g [class*="pure-u"] {
-  font-family: "Noto Sans"; }
+  font-family: "Noto Sans";
+  font-size: 17px; }
 
 @media (min-width: 1024px) {
   .main {
@@ -253,13 +256,26 @@ The main SCSS file for everything, yep
       font-size: .9em;
       display: inline-block;
       padding-bottom: 0.9em;
-      margin-right: 3em;
-      margin-bottom: 1.5em;
+      margin: 0 1.5em 1.5em 1.5em;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .sidebar__nav a {
+          margin-right: 1em; } }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .sidebar__nav a {
+          margin: 0 1em 0 0; } }
+      @media (min-width: 1024px) {
+        .sidebar__nav a {
+          margin: 0 3em 0 0; } }
     .sidebar__nav--active {
       border-bottom: 3px solid #2AF4FD; }
+  .sidebar__hero {
+    margin: 0 auto;
+    display: block;
+    height: 50vh;
+    margin-bottom: -100px; }
   .sidebar__botom {
     z-index: 1;
     padding-left: 0;
@@ -268,27 +284,41 @@ The main SCSS file for everything, yep
     @media (min-width: 768px) and (max-width: 1023px) {
       .sidebar__botom {
         position: absolute;
-        bottom: 0; } }
+        bottom: 0;
+        font-size: 0.8em;
+        padding-right: inherit;
+        width: 80%; } }
     @media (min-width: 1024px) {
       .sidebar__botom {
         position: absolute;
-        bottom: 0; } }
+        bottom: 0;
+        padding-right: inherit;
+        width: 80%; } }
   .sidebar__h1 {
     font-size: 3em; }
   .sidebar__social {
-    padding-right: 2em; }
+    padding: 1em; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .sidebar__social {
+        padding: 0 2em 0 0; } }
+    @media (min-width: 1024px) {
+      .sidebar__social {
+        padding: 0 2em 0 0; } }
+    .sidebar__social img {
+      width: 35px;
+      height: 35px; }
 
 .logo {
-  margin: 50px auto;
+  margin: 8% auto 0;
   width: 70px; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .logo {
-      margin-top: 45px;
+      margin-top: 8%;
       position: absolute;
       right: -38px; } }
   @media (min-width: 1024px) {
     .logo {
-      margin-top: 85px;
+      margin-top: 6%;
       position: absolute;
       right: -38px; } }
 
