@@ -17,9 +17,10 @@
   }
 }
 .gradient {
+  background-color:#4B3A72;
   background-image:url('../images/bg.svg');
   background-size:cover;
-  background-color:#4B3A72;
+
   @include md {
     text-align:left;
     position: fixed;
@@ -34,7 +35,7 @@
   }
 }
 .sidebar {
-  //
+
 
   background-image:url('../images/hatch.svg');
 

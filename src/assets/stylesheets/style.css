@@ -228,9 +228,9 @@ The main SCSS file for everything, yep
     margin-left: 33.333%; } }
 
 .gradient {
+  background-color: #4B3A72;
   background-image: url('../images/bg.svg');
-  background-size: cover;
-  background-color: #4B3A72; }
+  background-size: cover; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .gradient {
       text-align: left;
