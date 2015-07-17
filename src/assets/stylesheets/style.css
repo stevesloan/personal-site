@@ -227,10 +227,25 @@ The main SCSS file for everything, yep
   .main {
     margin-left: 33.333%; } }
 
-.sidebar {
+.gradient {
   background-image: url('../images/bg.svg');
-  background-color: #4B3A72;
   background-size: cover;
+  background-color: #4B3A72; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .gradient {
+      text-align: left;
+      position: fixed;
+      top: 0;
+      bottom: 0; } }
+  @media (min-width: 1024px) {
+    .gradient {
+      text-align: left;
+      position: fixed;
+      top: 0;
+      bottom: 0; } }
+
+.sidebar {
+  background-image: url('../images/hatch.svg');
   color: white;
   will-change: transform;
   text-align: center; }
@@ -278,6 +293,7 @@ The main SCSS file for everything, yep
     margin-bottom: -100px; }
   .sidebar__botom {
     z-index: 1;
+    overflow: hidden;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0; }

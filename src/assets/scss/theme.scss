@@ -16,11 +16,27 @@
 
   }
 }
-
-.sidebar {
+.gradient {
   background-image:url('../images/bg.svg');
-  background-color:#4B3A72;
   background-size:cover;
+  background-color:#4B3A72;
+  @include md {
+    text-align:left;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  @include lg {
+    text-align:left;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}
+.sidebar {
+  //
+
+  background-image:url('../images/hatch.svg');
 
   color:white;
   will-change:transform;
@@ -82,7 +98,7 @@
   &__botom{
     z-index:1;
     @extend .p2;
-
+    overflow: hidden;
 
     padding-left:0;
     padding-right:0;
