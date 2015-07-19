@@ -1,9 +1,8 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-20 -20 250 254"  xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 250 254"  xml:space="preserve">
 	 <filter id="shadow">
-	 <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
+	 <feOffset result="offOut" in="SourceAlpha" dx="4" dy="4" />
         <feComponentTransfer in="offOut" result="offOut">
-    <feFuncA type="linear"  slope="0.8"/>
+    <feFuncA type="linear"  slope="0.6"/>
           </feComponentTransfer>
         <feGaussianBlur result="offOut" in="offOut" stdDeviation="12" />
         <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
@@ -16,8 +15,8 @@
 		<polygon fill="url(#SVGID_1_)" points="185.3,89.3 185.3,160.5 161.9,174 97.9,142.5 	"/>
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="74.8502" y1="76.6903" x2="110.8635" y2="139.067">
 			<stop  offset="0" style="stop-color:#2E383B"/>
-			<stop  offset=".25" style="stop-color:#4E6065"/>
-			<stop  offset="0.8" style="stop-color:#4E6065"/>
+			<stop  offset=".35" style="stop-color:#4E6065"/>
+			<stop  offset="0.7" style="stop-color:#4E6065"/>
 			<stop  offset="1" style="stop-color:#2E383B"/>
 		</linearGradient>
 		<polygon fill="url(#SVGID_2_)" points="138.9,80.3 185.3,89.3 102.9,143.7 71,124.8 46.4,134.7 0,125.8 82.4,72.3 115,87 	"/>

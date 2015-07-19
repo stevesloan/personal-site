@@ -8,6 +8,12 @@
   }
 }
 .p2 {
-  padding:8% 10%;
+  padding:20px;
 
+  @include md {
+    padding:40px 50px;
+  }
+  @include lg {
+    padding:90px 100px;
+  }
 }

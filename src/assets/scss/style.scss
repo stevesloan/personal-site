@@ -1,12 +1,10 @@
-/*
-The main SCSS file for everything, yep
-*/
+//main scss
 
-//@import "poole";
-@import "syntax";
-//@import "lanyon";
 @import "variables";
-@import "typo";
 @import "mixins";
+
+@import "syntax";
+
+@import "typo";
 @import "box";
 @import "theme";

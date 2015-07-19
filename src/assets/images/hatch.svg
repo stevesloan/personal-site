@@ -1,8 +1,8 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
   <defs>
     <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect x="2" y="0" width="2" height="2" fill="#fff" fill-opacity=".12"  />
-      <rect x="0" y="2" width="2" height="2" fill="#fff" fill-opacity=".12" />
+      <rect x="2" y="0" width="2" height="2" fill="#C2AEE1" fill-opacity=".17"  />
+      <rect x="0" y="2" width="2" height="2" fill="#C2AEE1" fill-opacity=".17" />
     </pattern>
   </defs>
   <rect fill="url(#hatch)" x="0" y="0" width="100%" height="100%"  />

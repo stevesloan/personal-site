@@ -16,6 +16,7 @@
 
   }
 }
+
 .gradient {
   background-color:#4B3A72;
   background-image:url('../images/bg.svg');
@@ -34,17 +35,15 @@
     bottom: 0;
   }
 }
+
 .sidebar {
-
-
-  background-image:url('../images/hatch.svg');
-
-  color:white;
-  will-change:transform;
-  text-align:center;
+  background-image: url('../images/hatch.svg');
+  color: #fff;
+  text-align: center;
+  will-change: transform;
 
   @include md {
-    text-align:left;
+    text-align: left;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -68,7 +67,10 @@
 
 
   &__nav {
-    z-index:100;
+
+    z-index:2;
+    @include md {position: absolute;}
+    @include lg {position: absolute;}
     a {
       font-size:.9em;
       display:inline-block;
@@ -77,12 +79,9 @@
       text-decoration:none;
       text-transform: uppercase;
       letter-spacing: 2px;
-      @include md {
 
-        margin-right:1em;
-      }
-      @include md {margin:0 1em 0 0;}
-      @include lg {margin:0 3em 0 0;}
+      @include md {margin: 0 1em 0 0;}
+      @include lg {margin: 0 3em 0 0;}
 
     }
 
@@ -139,18 +138,21 @@
 }
 
 .logo {
-  margin: 8% auto 0;
-  width:70px;
+  padding-right: 0;
+  padding-left: 0;
+
+  margin: 0 auto ;
+  width: 70px;
   @include md {
-    margin-top:8%;
-    position:absolute;
-    right:-38px;
+    position: absolute;
+    right: -38px;
+    top: -15px;
 
   }
   @include lg {
-    margin-top:6%;
-    position:absolute;
-    right:-38px;
+    position: absolute;
+    right: -38px;
+    top: -15px;
   }
 }
 
