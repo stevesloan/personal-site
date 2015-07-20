@@ -1,8 +1,8 @@
 .pure-g, .pure-g [class *="pure-u"]{
-  font-family: "Noto Sans";
+  //font-family: "Noto Sans";
   //font-family: "Lato";
   font-size: 17px;
-  //font-family: "Raleway";
+  font-family: "Raleway";
 }
 
 .main {
@@ -92,8 +92,10 @@
   &__hero {
     margin:0 auto;
     display:block;
-    height: 50vh;
+    max-height: 50vh;
     margin-bottom:-100px;
+    @include md {max-width: 100%;height:auto;}
+    @include lg {max-width: 100%;height:auto;}
   }
   &__botom{
     z-index:1;
@@ -109,13 +111,12 @@
       bottom:0;
       font-size:0.8em;
       padding-right:inherit;
-      width:80%;
     }
     @include lg {
       position:absolute;
       bottom:0;
       padding-right:inherit;
-      width:80%;
+      width:73%;
     }
 
   }

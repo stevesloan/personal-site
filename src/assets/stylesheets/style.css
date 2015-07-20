@@ -226,8 +226,8 @@
       padding: 90px 100px; } }
 
 .pure-g, .pure-g [class*="pure-u"] {
-  font-family: "Noto Sans";
-  font-size: 17px; }
+  font-size: 17px;
+  font-family: "Raleway"; }
 
 @media (min-width: 1024px) {
   .main {
@@ -301,8 +301,16 @@
   .sidebar__hero {
     margin: 0 auto;
     display: block;
-    height: 50vh;
+    max-height: 50vh;
     margin-bottom: -100px; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .sidebar__hero {
+        max-width: 100%;
+        height: auto; } }
+    @media (min-width: 1024px) {
+      .sidebar__hero {
+        max-width: 100%;
+        height: auto; } }
   .sidebar__botom {
     z-index: 1;
     overflow: hidden;
@@ -314,14 +322,13 @@
         position: absolute;
         bottom: 0;
         font-size: 0.8em;
-        padding-right: inherit;
-        width: 80%; } }
+        padding-right: inherit; } }
     @media (min-width: 1024px) {
       .sidebar__botom {
         position: absolute;
         bottom: 0;
         padding-right: inherit;
-        width: 80%; } }
+        width: 73%; } }
   .sidebar__h1 {
     font-size: 3em; }
   .sidebar__social {

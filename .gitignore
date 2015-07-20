@@ -53,6 +53,7 @@ tags
 node_modules/*
 .tmp
 test/
+Gemfile.lock
 
 # Sublime
 *.sublime-project
