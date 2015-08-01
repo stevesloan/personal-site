@@ -96,6 +96,17 @@
     margin-bottom:-100px;
     @include md {max-width: 100%;height:auto;}
     @include lg {max-width: 100%;height:auto;}
+
+    &--ghost {
+      position:absolute;
+      margin-top:-15em;
+      margin-left:-5em;
+      transform: scaleX(-1);
+      zoom:150%;
+      opacity:.2;
+      top:0;
+      left:0;
+    }
   }
   &__botom{
     z-index:1;

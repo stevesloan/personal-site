@@ -311,6 +311,17 @@
       .sidebar__hero {
         max-width: 100%;
         height: auto; } }
+    .sidebar__hero--ghost {
+      position: absolute;
+      margin-top: -15em;
+      margin-left: -5em;
+      -webkit-transform: scaleX(-1);
+          -ms-transform: scaleX(-1);
+              transform: scaleX(-1);
+      zoom: 150%;
+      opacity: .2;
+      top: 0;
+      left: 0; }
   .sidebar__botom {
     z-index: 1;
     overflow: hidden;
