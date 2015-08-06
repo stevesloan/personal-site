@@ -338,8 +338,7 @@
       .sidebar__botom {
         position: absolute;
         bottom: 0;
-        padding-right: inherit;
-        width: 73%; } }
+        padding-right: inherit; } }
   .sidebar__h1 {
     font-size: 3em; }
   .sidebar__social {
