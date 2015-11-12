@@ -6,15 +6,7 @@
 }
 
 .main {
-  @include lg {
-    margin-left: 50%;
 
-  }
-
-  @include md {
-    margin-left: 33.333%;
-
-  }
 }
 
 .gradient {
@@ -40,20 +32,9 @@
   background-image: url('../images/hatch.svg');
   color: #fff;
   text-align: center;
-  will-change: transform;
+  height:200%;
 
-  @include md {
-    text-align: left;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-  @include lg {
-    text-align:left;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
+
 
 
 
@@ -86,7 +67,7 @@
     }
 
     &--active {
-      border-bottom:3px solid $c-primary;
+      border-bottom:1px solid $c-white;
     }
   }
   &__hero {
@@ -99,36 +80,17 @@
 
     &--ghost {
       position:absolute;
-      margin-top:-5em;
-      margin-left:-5em;
+      margin-top:10%;
+      margin-left:10%;
       transform: scaleX(-1);
-      zoom:150%;
-      opacity:.2;
+      zoom:180%;
+      opacity:.5;
       top:0;
       left:0;
     }
   }
   &__botom{
-    z-index:1;
-    @extend .p2;
-    overflow: hidden;
-
-    padding-left:0;
-    padding-right:0;
-    padding-top:0;
-
-    @include md {
-      position:absolute;
-      bottom:0;
-      font-size:0.8em;
-      padding-right:inherit;
-    }
-    @include lg {
-      position:absolute;
-      bottom:0;
-      padding-right:inherit;
-      //width:73%;
-    }
+    margin-top:50%;
 
   }
 
@@ -150,21 +112,23 @@
 }
 
 .logo {
-  padding-right: 0;
-  padding-left: 0;
+  img {
+    height:38px;
+    float:left;
+    padding-right:1em;
 
-  margin: 0 auto ;
-  width: 70px;
+  }
+  div {
+
+    line-height:38px;
+  }
+
   @include md {
-    position: absolute;
-    right: -38px;
-    top: -15px;
+
 
   }
   @include lg {
-    position: absolute;
-    right: -38px;
-    top: -15px;
+
   }
 }
 

@@ -218,26 +218,21 @@
     .m2 {
       margin: 120px; } }
 
-.p2, .sidebar__botom {
+.p1 {
+  padding: 2em; }
+
+.p2 {
   padding: 20px; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .p2, .sidebar__botom {
+    .p2 {
       padding: 40px 50px; } }
   @media (min-width: 1024px) {
-    .p2, .sidebar__botom {
+    .p2 {
       padding: 90px 100px; } }
 
 .pure-g, .pure-g [class*="pure-u"] {
   font-size: 17px;
   font-family: "Raleway"; }
-
-@media (min-width: 1024px) {
-  .main {
-    margin-left: 50%; } }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .main {
-    margin-left: 33.333%; } }
 
 .gradient {
   background-color: #4B3A72;
@@ -260,19 +255,7 @@
   background-image: url("../images/hatch.svg");
   color: #fff;
   text-align: center;
-  will-change: transform; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .sidebar {
-      text-align: left;
-      position: fixed;
-      top: 0;
-      bottom: 0; } }
-  @media (min-width: 1024px) {
-    .sidebar {
-      text-align: left;
-      position: fixed;
-      top: 0;
-      bottom: 0; } }
+  height: 200%; }
   .sidebar a {
     color: #fff; }
     .sidebar a:active, .sidebar a:focus, .sidebar a:visited {
@@ -300,7 +283,7 @@
         .sidebar__nav a {
           margin: 0 3em 0 0; } }
     .sidebar__nav--active {
-      border-bottom: 3px solid #2AF4FD; }
+      border-bottom: 1px solid #fff; }
   .sidebar__hero {
     margin: 0 auto;
     display: block;
@@ -316,32 +299,17 @@
         height: auto; } }
     .sidebar__hero--ghost {
       position: absolute;
-      margin-top: -5em;
-      margin-left: -5em;
+      margin-top: 10%;
+      margin-left: 10%;
       -webkit-transform: scaleX(-1);
           -ms-transform: scaleX(-1);
               transform: scaleX(-1);
-      zoom: 150%;
-      opacity: .2;
+      zoom: 180%;
+      opacity: .5;
       top: 0;
       left: 0; }
   .sidebar__botom {
-    z-index: 1;
-    overflow: hidden;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0; }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .sidebar__botom {
-        position: absolute;
-        bottom: 0;
-        font-size: 0.8em;
-        padding-right: inherit; } }
-    @media (min-width: 1024px) {
-      .sidebar__botom {
-        position: absolute;
-        bottom: 0;
-        padding-right: inherit; } }
+    margin-top: 50%; }
   .sidebar__h1 {
     font-size: 3em; }
   .sidebar__social {
@@ -356,21 +324,13 @@
       width: 35px;
       height: 35px; }
 
-.logo {
-  padding-right: 0;
-  padding-left: 0;
-  margin: 0 auto;
-  width: 70px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .logo {
-      position: absolute;
-      right: -38px;
-      top: -15px; } }
-  @media (min-width: 1024px) {
-    .logo {
-      position: absolute;
-      right: -38px;
-      top: -15px; } }
+.logo img {
+  height: 38px;
+  float: left;
+  padding-right: 1em; }
+
+.logo div {
+  line-height: 38px; }
 
 .page {
   margin-top: -0.67em; }
