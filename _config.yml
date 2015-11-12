@@ -32,11 +32,11 @@ lsi: false
 limit_posts: 10
 
 # Permalink structure and pagination options
-relative_permalinks: true
-permalink: none
-paginate: 10
-paginate_path: 'page:num'
-excerpt_separator: '<!--more-->'
+#relative_permalinks: true
+#permalink: none
+#paginate: 10
+#paginate_path: 'page:num'
+#excerpt_separator: '<!--more-->'
 
 # Markdown library
 markdown: redcarpet
