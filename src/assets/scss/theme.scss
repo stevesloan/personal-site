@@ -6,6 +6,12 @@
 }
 
 .main {
+//float:left;
+
+}
+
+.pure-g {
+  flex-direction: row-reverse;
 
 }
 
@@ -13,29 +19,34 @@
   background-color:#4B3A72;
   background-image:url('../images/bg.svg');
   background-size:cover;
+  overflow: hidden;
+
 
   @include md {
     text-align:left;
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    //position: fixed;
+    //float:right;
   }
   @include lg {
     text-align:left;
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    //position: fixed;
+    //float:right;
   }
 }
+.sidebar-inner {
+  background-image: url('../images/SteveSloan.png') ;
 
+}
 .sidebar {
   background-image: url('../images/hatch.svg');
   color: #fff;
   text-align: center;
-  height:200%;
+
+  @include md {height:100vh;}
+  @include lg {height:100vh;}
 
 
-
+  .container{position: relative;}
 
 
 
@@ -49,7 +60,6 @@
 
   &__nav {
 
-    z-index:2;
     @include md {position: absolute;}
     @include lg {position: absolute;}
     a {
@@ -80,18 +90,19 @@
 
     &--ghost {
       position:absolute;
-      margin-top:10%;
-      margin-left:10%;
+      margin-top:2%;
+      margin-right:-15%;
       transform: scaleX(-1);
       zoom:180%;
       opacity:.5;
       top:0;
-      left:0;
+      right:0;
     }
   }
   &__botom{
-    margin-top:50%;
-
+    position:relative;
+    @include md {margin-top:50%;}
+    @include lg {margin-top:50%;}
   }
 
   &__h1 {

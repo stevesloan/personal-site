@@ -234,56 +234,66 @@
   font-size: 17px;
   font-family: "Raleway"; }
 
+.pure-g {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+
 .gradient {
   background-color: #4B3A72;
   background-image: url("../images/bg.svg");
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .gradient {
-      text-align: left;
-      position: fixed;
-      top: 0;
-      bottom: 0; } }
+      text-align: left; } }
   @media (min-width: 1024px) {
     .gradient {
-      text-align: left;
-      position: fixed;
-      top: 0;
-      bottom: 0; } }
+      text-align: left; } }
+
+.sidebar-inner {
+  background-image: url("../images/SteveSloan.png"); }
 
 .sidebar {
   background-image: url("../images/hatch.svg");
   color: #fff;
-  text-align: center;
-  height: 200%; }
+  text-align: center; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar {
+      height: 100vh; } }
+  @media (min-width: 1024px) {
+    .sidebar {
+      height: 100vh; } }
+  .sidebar .container {
+    position: relative; }
   .sidebar a {
     color: #fff; }
     .sidebar a:active, .sidebar a:focus, .sidebar a:visited {
       color: #fff; }
-  .sidebar__nav {
-    z-index: 2; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar__nav {
+      position: absolute; } }
+  @media (min-width: 1024px) {
+    .sidebar__nav {
+      position: absolute; } }
+  .sidebar__nav a {
+    font-size: .9em;
+    display: inline-block;
+    padding-bottom: 0.9em;
+    margin: 0 1.5em 1.5em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
     @media (min-width: 768px) and (max-width: 1023px) {
-      .sidebar__nav {
-        position: absolute; } }
+      .sidebar__nav a {
+        margin: 0 1em 0 0; } }
     @media (min-width: 1024px) {
-      .sidebar__nav {
-        position: absolute; } }
-    .sidebar__nav a {
-      font-size: .9em;
-      display: inline-block;
-      padding-bottom: 0.9em;
-      margin: 0 1.5em 1.5em 1.5em;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 2px; }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .sidebar__nav a {
-          margin: 0 1em 0 0; } }
-      @media (min-width: 1024px) {
-        .sidebar__nav a {
-          margin: 0 3em 0 0; } }
-    .sidebar__nav--active {
-      border-bottom: 1px solid #fff; }
+      .sidebar__nav a {
+        margin: 0 3em 0 0; } }
+  .sidebar__nav--active {
+    border-bottom: 1px solid #fff; }
   .sidebar__hero {
     margin: 0 auto;
     display: block;
@@ -299,17 +309,23 @@
         height: auto; } }
     .sidebar__hero--ghost {
       position: absolute;
-      margin-top: 10%;
-      margin-left: 10%;
+      margin-top: 2%;
+      margin-right: -15%;
       -webkit-transform: scaleX(-1);
           -ms-transform: scaleX(-1);
               transform: scaleX(-1);
       zoom: 180%;
       opacity: .5;
       top: 0;
-      left: 0; }
+      right: 0; }
   .sidebar__botom {
-    margin-top: 50%; }
+    position: relative; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .sidebar__botom {
+        margin-top: 50%; } }
+    @media (min-width: 1024px) {
+      .sidebar__botom {
+        margin-top: 50%; } }
   .sidebar__h1 {
     font-size: 3em; }
   .sidebar__social {
