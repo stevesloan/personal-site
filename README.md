@@ -4,7 +4,7 @@
 
 #Dependancies
 * python
-* jekyll, bundle, redcarpet
+* pip install jekyll bundle redcarpet
 
 #Installation
 * npm install
