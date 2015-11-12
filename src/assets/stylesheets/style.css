@@ -183,7 +183,9 @@
 .il {
   color: #FF6600; }
 
-.css .o, .css .o + .nt, .css .nt + .nt {
+.css .o,
+.css .o + .nt,
+.css .nt + .nt {
   color: #999; }
 
 .page-title {
@@ -232,13 +234,14 @@
 @media (min-width: 1024px) {
   .main {
     margin-left: 50%; } }
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .main {
     margin-left: 33.333%; } }
 
 .gradient {
   background-color: #4B3A72;
-  background-image: url('../images/bg.svg');
+  background-image: url("../images/bg.svg");
   background-size: cover; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .gradient {
@@ -254,7 +257,7 @@
       bottom: 0; } }
 
 .sidebar {
-  background-image: url('../images/hatch.svg');
+  background-image: url("../images/hatch.svg");
   color: #fff;
   text-align: center;
   will-change: transform; }
@@ -313,7 +316,7 @@
         height: auto; } }
     .sidebar__hero--ghost {
       position: absolute;
-      margin-top: -15em;
+      margin-top: -5em;
       margin-left: -5em;
       -webkit-transform: scaleX(-1);
           -ms-transform: scaleX(-1);
