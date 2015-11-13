@@ -10,17 +10,23 @@
 
 }
 
+.c-primary {
+   stroke: #006600;
+   fill:   #00cc00;
+}
+
 .pure-g {
   flex-direction: row-reverse;
-
+  flex-flow: row-reverse wrap;
+  align-items: stretch
 }
 
 .gradient {
-  background-color:#4B3A72;
+  background-color:darken($c-primary,10%);
   background-image:url('../images/bg.svg');
   background-size:cover;
-  overflow: hidden;
 
+  float:right;
 
   @include md {
     text-align:left;
@@ -38,15 +44,34 @@
 
 }
 .sidebar {
+
   background-image: url('../images/hatch.svg');
   color: #fff;
   text-align: center;
+  overflow:hidden;
 
-  @include md {height:100vh;}
-  @include lg {height:100vh;}
+  @include md {
+    height:100vh;
+    justify-content: center;
+    display: flex;
+  }
+  @include lg {
+    height:100vh;
+    justify-content: center;
+    display: flex;
+  }
 
 
-  .container{position: relative;}
+  .container{
+    position: relative;
+
+    @include md {
+      display: flex;
+    }
+    @include lg {
+      display: flex;
+    }
+  }
 
 
 
@@ -59,7 +84,7 @@
 
 
   &__nav {
-
+    position: relative;
     @include md {position: absolute;}
     @include lg {position: absolute;}
     a {
@@ -81,28 +106,20 @@
     }
   }
   &__hero {
-    margin:0 auto;
-    display:block;
-    max-height: 50vh;
-    margin-bottom:-100px;
-    @include md {max-width: 100%;height:auto;}
-    @include lg {max-width: 100%;height:auto;}
 
     &--ghost {
       position:absolute;
-      margin-top:2%;
-      margin-right:-15%;
-      transform: scaleX(-1);
-      zoom:180%;
+      width:120%;
+      transform: scaleX(-1)  translate(-30%,0%);
       opacity:.5;
       top:0;
       right:0;
     }
   }
   &__botom{
+
     position:relative;
-    @include md {margin-top:50%;}
-    @include lg {margin-top:50%;}
+    margin:auto;
   }
 
   &__h1 {
@@ -122,10 +139,37 @@
 
 }
 
-.logo {
+.logo-sm {
+  display:block;
+  margin-bottom:2em;
+  @include md {display:none;}
+  @include lg {display:none;}
   img {
-    height:38px;
+    height:2em;
+    width:2em;
     float:left;
+
+    padding-right:1em;
+
+  }
+  div {
+
+    position: absolute;
+    right:2em;
+    line-height:38px;
+
+  }
+}
+
+.logo {
+  display:none;
+  @include md {display:block;}
+  @include lg {display:block;}
+  img {
+    height:2em;
+    width:2em;
+    float:left;
+
     padding-right:1em;
 
   }
@@ -134,13 +178,6 @@
     line-height:38px;
   }
 
-  @include md {
-
-
-  }
-  @include lg {
-
-  }
 }
 
 .page {

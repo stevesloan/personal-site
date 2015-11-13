@@ -123,6 +123,12 @@ gulp.task("jslint", function () {
     .pipe($.jshint.reporter());
 });
 
+gulp.task("scripts", function () {
+  gulp.src("./serve/assets/javascript/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("serve/assets/javascript/"))
+});
+
 // Runs "jekyll doctor" on your site to check for errors with your configuration
 // and will check for URL errors a well
 gulp.task("doctor", $.shell.task("jekyll doctor"));
