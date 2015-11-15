@@ -24,3 +24,15 @@ Some fun facts about the setup of this project include:
 Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
 
 Thanks for reading!
+
+
+
+
+{% contentfor sidebar %}
+<p>
+
+
+  <h1 class="sidebar__h1 slim">Let's Get In Touch</h1>
+  
+</p>
+{% endcontentfor %}

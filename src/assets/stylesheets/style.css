@@ -253,6 +253,7 @@
   background-color: #224c74;
   background-image: url("../images/bg.svg");
   background-size: cover;
+  background-attachment: fixed;
   float: right; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .gradient {
@@ -262,10 +263,12 @@
       text-align: left; } }
 
 .sidebar-inner {
-  background-image: url("../images/SteveSloan.png"); }
+  background-image: url("../images/SteveSloan.png");
+  background-attachment: fixed; }
 
 .sidebar {
   background-image: url("../images/hatch.svg");
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
   overflow: hidden; }
@@ -304,7 +307,9 @@
     .sidebar a:active, .sidebar a:focus, .sidebar a:visited {
       color: #fff; }
   .sidebar__nav {
-    position: relative; }
+    position: relative;
+    left: 0;
+    right: 0; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .sidebar__nav {
         position: absolute; } }
@@ -315,7 +320,7 @@
       font-size: .9em;
       display: inline-block;
       padding-bottom: 0.9em;
-      margin: 0 1.5em 1.5em 1.5em;
+      margin: 0 1.5em 0 0;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px; }
@@ -325,6 +330,8 @@
       @media (min-width: 1024px) {
         .sidebar__nav a {
           margin: 0 3em 0 0; } }
+    .sidebar__nav a:last-child {
+      margin-right: 0; }
     .sidebar__nav--active {
       border-bottom: 1px solid #fff; }
   .sidebar__hero--ghost {
@@ -344,15 +351,16 @@
     padding: 1em; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .sidebar__social {
-        padding: 0 2em 0 0; } }
+        padding: 0 0.5em 0 0.5em; } }
     @media (min-width: 1024px) {
       .sidebar__social {
-        padding: 0 2em 0 0; } }
+        padding: 0 1em 0 1em; } }
     .sidebar__social img {
       width: 35px;
       height: 35px; }
 
 .logo-sm {
+  color: #333;
   display: block;
   margin-bottom: 2em; }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -372,6 +380,7 @@
     line-height: 38px; }
 
 .logo {
+  color: #333;
   display: none; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .logo {

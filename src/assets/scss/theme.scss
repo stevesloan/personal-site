@@ -22,10 +22,11 @@
 }
 
 .gradient {
+
   background-color:darken($c-primary,10%);
   background-image:url('../images/bg.svg');
   background-size:cover;
-
+  background-attachment: fixed;
   float:right;
 
   @include md {
@@ -41,11 +42,12 @@
 }
 .sidebar-inner {
   background-image: url('../images/SteveSloan.png') ;
-
+  background-attachment: fixed;
 }
 .sidebar {
 
   background-image: url('../images/hatch.svg');
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
   overflow:hidden;
@@ -85,13 +87,16 @@
 
   &__nav {
     position: relative;
+    left: 0;
+    right: 0;
     @include md {position: absolute;}
     @include lg {position: absolute;}
+
     a {
       font-size:.9em;
       display:inline-block;
       padding-bottom:0.9em;
-      margin:0 1.5em 1.5em 1.5em;;
+      margin:0 1.5em 0 0;
       text-decoration:none;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -99,6 +104,10 @@
       @include md {margin: 0 1em 0 0;}
       @include lg {margin: 0 3em 0 0;}
 
+    }
+
+    a:last-child {
+      margin-right:0;
     }
 
     &--active {
@@ -129,8 +138,8 @@
 
   &__social {
     padding:1em;
-    @include md {padding:0 2em 0 0;}
-    @include lg {padding:0 2em 0 0;}
+    @include md {padding:0 0.5em 0 0.5em;}
+    @include lg {padding:0 1em 0 1em;}
     img{
       width:35px;
       height:35px;
@@ -140,6 +149,7 @@
 }
 
 .logo-sm {
+  color:#333;
   display:block;
   margin-bottom:2em;
   @include md {display:none;}
@@ -162,6 +172,7 @@
 }
 
 .logo {
+  color:#333;
   display:none;
   @include md {display:block;}
   @include lg {display:block;}
