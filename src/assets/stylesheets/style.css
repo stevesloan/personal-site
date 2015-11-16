@@ -249,8 +249,40 @@
   -ms-flex-align: stretch;
   align-items: stretch; }
 
+.pull-left {
+  float: left;
+  margin-left: 0; }
+
+.profile-pic {
+  border-radius: 50%;
+  background-color: #47a1c3;
+  background-image: url("../images/hatch.svg");
+  background-attachment: fixed;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-top: 0; }
+
+.profile-pic__image {
+  width: 100%;
+  margin-top: -10px;
+  margin-left: -10px; }
+
+.btn {
+  background-color: #ff8933;
+  padding: 0.6em 1em;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  background-image: url("../images/hatch.svg"); }
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid #b3b3b3; }
+
 .gradient {
-  background-color: #224c74;
+  background-color: #3584a2;
   background-image: url("../images/bg.svg");
   background-size: cover;
   background-attachment: fixed;
@@ -336,12 +368,18 @@
       border-bottom: 1px solid #fff; }
   .sidebar__hero--ghost {
     position: absolute;
-    width: 120%;
-    -webkit-transform: scaleX(-1) translate(-30%, 0%);
-    transform: scaleX(-1) translate(-30%, 0%);
+    height: 120%;
+    -webkit-transform: scaleX(-1) translate(-40%, 0%);
+    transform: scaleX(-1) translate(-40%, 0%);
     opacity: .5;
     top: 0;
     right: 0; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .sidebar__hero--ghost {
+        height: 90%; } }
+    @media (min-width: 1024px) {
+      .sidebar__hero--ghost {
+        height: 100%; } }
   .sidebar__botom {
     position: relative;
     margin: auto; }
