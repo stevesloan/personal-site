@@ -7,8 +7,22 @@ title: Resume
 ### iPorta Corp
 Full Stack Developer : June 2013 - Present
 
+* uptime tracker
+
+* phonegap development
+
+* Managed remote workers
+
+* bsa node restful api, single page app and anglur crud admin interface
+
+* directed video ad campaign
+
+* Created responsive websites.
+
+
+
 - - -
-### Freelance Web Developer
+### Freelance Developer
 Self-Employed : March 2013 - June 2013
 
 *	Designed and Developed HTML 5 site with jQuery gallery
@@ -16,8 +30,8 @@ Self-Employed : March 2013 - June 2013
 *	Created custom AJAX/PHP/MySQL based shopping cart to record paypal transactions
 
 - - -
-### Web Designer/Developer
-Hewlett-Packard : October 2010 - November 2012
+### Hewlett-Packard
+Web Designer/Developer : October 2010 - November 2012
 
 *	Updated and maintained large e-commerce website hpshopping.ca in a team environment using HP's in-house CMS
 

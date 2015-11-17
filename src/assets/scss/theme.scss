@@ -46,6 +46,7 @@
   color:$c-white;
   display:inline-block;
   background-image: url('../images/hatch.svg');
+  border:1px solid $c-secondary;
 }
 hr {
   height:0;

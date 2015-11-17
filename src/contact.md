@@ -4,10 +4,10 @@ title: Contact
 ---
 
 <form action="#" method="POST">
-    <input type="text" name="name">
-    <input type="email" name="_replyto">
-    <textarea></textarea>
-    <button type="submit">Send</button>
+    <input required placeholder="Name" type="text" name="name">
+    <input required placeholder="Email" type="email" name="_replyto">
+    <textarea rows="10" placeholder="Message" rowcoun="10" required></textarea>
+    <button class="btn" type="submit">SEND</button>
 </form>
 
 
