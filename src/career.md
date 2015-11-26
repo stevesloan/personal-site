@@ -74,5 +74,6 @@ November 2004 – August 2006
 {% contentfor sidebar %}
 <p>
   <h1 class="sidebar__h1 slim">Over a Decade of Web Development</h1>
+  <span></span>
 </p>
 {% endcontentfor %}
