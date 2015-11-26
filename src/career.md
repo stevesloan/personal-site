@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Resume
+title: Career
 ---
 - - -
 
 ### iPorta Corp
 Full Stack Developer : June 2013 - Present
+
+* Created responsive websites using modern javascript
 
 * uptime tracker
 
@@ -17,7 +19,7 @@ Full Stack Developer : June 2013 - Present
 
 * directed video ad campaign
 
-* Created responsive websites.
+
 
 
 

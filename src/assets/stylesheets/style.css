@@ -234,6 +234,9 @@
   font-size: 17px;
   font-family: "Raleway"; }
 
+a {
+  color: #193B5A; }
+
 .c-primary {
   stroke: #006600;
   fill: #00cc00; }
@@ -272,10 +275,13 @@
   background-color: #ff8933;
   padding: 0.6em 1em;
   text-decoration: none;
+  border-radius: 2em;
   color: #fff;
   display: inline-block;
   background-image: url("../images/hatch.svg");
   border: 1px solid #ff6c00; }
+  .btn--right {
+    float: right; }
 
 hr {
   height: 0;
@@ -417,6 +423,9 @@ hr {
     position: absolute;
     right: 2em;
     line-height: 38px; }
+  .logo-sm a {
+    color: #333;
+    text-decoration: none; }
 
 .logo {
   color: #333;
@@ -434,6 +443,9 @@ hr {
     padding-right: 1em; }
   .logo div {
     line-height: 38px; }
+  .logo a {
+    color: #333;
+    text-decoration: none; }
 
 .page {
   margin-top: -0.67em; }
@@ -672,7 +684,7 @@ textarea.materialize-textarea {
 
 textarea {
   width: 100%;
-  height: 3rem;
+  height: 7rem;
   background-color: transparent; }
   textarea.materialize-textarea {
     overflow-y: hidden;

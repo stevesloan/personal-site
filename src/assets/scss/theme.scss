@@ -10,6 +10,10 @@
 
 }
 
+a {
+  color:$c-primary-dark;
+}
+
 .c-primary {
    stroke: #006600;
    fill:   #00cc00;
@@ -43,11 +47,17 @@
   background-color:lighten($c-secondary,10%);
   padding:0.6em 1em;
   text-decoration:none;
+  border-radius: 2em;
   color:$c-white;
   display:inline-block;
   background-image: url('../images/hatch.svg');
   border:1px solid $c-secondary;
+  &--right {
+    float:right;
+
+  }
 }
+
 hr {
   height:0;
   border:0;
@@ -204,10 +214,15 @@ hr {
     line-height:38px;
 
   }
+  a {
+    color:$c-dark-gray;
+    text-decoration: none;
+
+  }
 }
 
 .logo {
-  color:#333;
+  color:$c-dark-gray;
   display:none;
   @include md {display:block;}
   @include lg {display:block;}
@@ -215,13 +230,17 @@ hr {
     height:2em;
     width:2em;
     float:left;
-
     padding-right:1em;
 
   }
   div {
 
     line-height:38px;
+  }
+  a {
+    color:$c-dark-gray;
+    text-decoration: none;
+
   }
 
 }

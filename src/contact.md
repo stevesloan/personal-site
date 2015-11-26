@@ -6,8 +6,10 @@ title: Contact
 <form action="#" method="POST">
     <input required placeholder="Name" type="text" name="name">
     <input required placeholder="Email" type="email" name="_replyto">
-    <textarea rows="10" placeholder="Message" rowcoun="10" required></textarea>
+    <textarea placeholder="Message" required></textarea>
+    <p>
     <button class="btn" type="submit">SEND</button>
+    </p>
 </form>
 
 
@@ -17,6 +19,6 @@ title: Contact
 
 
   <h1 class="sidebar__h1 slim">Let's Get In Touch</h1>
-
+  <span class=" slim"><a href="mailto:contact@stevesloan.ca">contact@stevesloan.ca</a></span>
 </p>
 {% endcontentfor %}
