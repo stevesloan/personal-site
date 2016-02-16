@@ -1,31 +1,21 @@
 
-<img src="assets/images/SteveSloan.png" class="sidebar__hero--ghost" />
- <nav class="sidebar__nav">
-   <a class="sidebar__nav-item{% if page.title == "About" %} sidebar__nav--active{% endif %}" href="/">About</a>
+<img src="{{ site.baseurl }}/assets/images/SteveSloan.png" class="sidebar__hero--ghost" />
 
-   {% comment %}
-     The code below dynamically generates a sidebar nav of pages with
-     `layout: page` in the front-matter. See readme for usage.
-   {% endcomment %}
+<nav class="sidebar__nav">
+  <a class="sidebar__nav-item{% if page.title == "About" %} sidebar__nav--active{% endif %}" href="/">About</a>
+  <!-- <a class="sidebar__nav-item{% if page.title == "Blog" %} sidebar__nav--active{% endif %}" href="/blog.html">Blog</a> -->
+  <a class="sidebar__nav-item{% if page.title == "Career" %} sidebar__nav--active{% endif %}" href="/career.html">Career</a>
 
-   {% assign pages_list = site.pages %}
-   {% for node in pages_list %}
-     {% if node.title != null %}
-       {% if node.layout == "page" %}
-         <a class="sidebar-nav-item{% if page.url == node.url %} sidebar__nav--active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-       {% endif %}
-     {% endif %}
-   {% endfor %}
+  <a class="sidebar__nav-item{% if page.title == "Contact" %} sidebar__nav--active{% endif %}" href="/contact.html">Contact</a>
+</nav>
 
-
- </nav>
 
 <div class="sidebar__botom">
   <aside>
     {% contentblock sidebar %}
   </aside>
-  
-  <span class="sidebar__social c-primary"><a href="https://twitter.com/{{ site.author.twitter}}"><img src="assets/images/twitter.svg" /></a></span>
-  <span class="sidebar__social"><a href="https://github.com/{{ site.author.github}}"><img src="assets/images/github.svg" /></a></span>
-  <span class="sidebar__social"><a href="https://ca.linkedin.com/in/{{ site.author.linkedin}}"><img class="c-primary" src="assets/images/linkedin.svg" /></a></span>
+
+  <span class="sidebar__social c-primary"><a href="https://twitter.com/{{ site.author.twitter}}"><img src="{{ site.baseurl }}/assets/images/twitter.svg" /></a></span>
+  <span class="sidebar__social"><a href="https://github.com/{{ site.author.github}}"><img src="{{ site.baseurl }}/assets/images/github.svg" /></a></span>
+  <span class="sidebar__social"><a href="https://ca.linkedin.com/in/{{ site.author.linkedin}}"><img class="c-primary" src="{{ site.baseurl }}/assets/images/linkedin.svg" /></a></span>
 </div>

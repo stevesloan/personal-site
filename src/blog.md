@@ -5,12 +5,13 @@ title: Blog
 
 <div class="posts">
   {% for post in site.posts %}
+  <hr />
   <div class="post">
-    <h1 class="post-title">
+    <h2 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
-    </h1>
+    </h2>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
@@ -18,6 +19,7 @@ title: Blog
 
     <a href="{{ post.url }}">Read more &raquo;</a>
   </div>
+
   {% endfor %}
 </div>
 
@@ -37,3 +39,9 @@ title: Blog
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+{% contentfor sidebar %}
+<p>
+  <h1 class="sidebar__h1 slim">Hi, I'm<br />Steve Sloan</h1>
+  <h3 class="sidebar_h2 slim">A full stack developer based in Toronto</h3>
+</p>
+{% endcontentfor %}
