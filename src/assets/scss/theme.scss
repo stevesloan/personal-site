@@ -64,12 +64,15 @@
 
   .container{
     position: relative;
-
+    width:100%;
+    padding: 2em 0;
     @include md {
       display: flex;
+      padding: 2em 1em;
     }
     @include lg {
       display: flex;
+      padding: 2em;
     }
   }
 
@@ -85,6 +88,9 @@
 
   &__nav {
     position: relative;
+    margin:0 auto;
+    display:block;
+
     @include md {position: absolute;}
     @include lg {position: absolute;}
     a {
@@ -95,6 +101,10 @@
       text-decoration:none;
       text-transform: uppercase;
       letter-spacing: 2px;
+
+      &:last-child {
+        margin:0;
+      }
 
       @include md {margin: 0 1em 0 0;}
       @include lg {margin: 0 3em 0 0;}
@@ -109,11 +119,18 @@
 
     &--ghost {
       position:absolute;
-      width:120%;
-      transform: scaleX(-1)  translate(-30%,0%);
+      transform: scaleX(-1)  translate(0%,0%);
       opacity:.5;
       top:0;
       right:0;
+      @include md {
+        width:160%;
+        transform: scaleX(-1)  translate(-30%,0%);
+      }
+      @include lg {
+        width:120%;
+        transform: scaleX(-1)  translate(-30%,0%);
+      }
     }
   }
   &__botom{
@@ -129,17 +146,32 @@
 
   &__social {
     padding:1em;
-    @include md {padding:0 2em 0 0;}
-    @include lg {padding:0 2em 0 0;}
+
+    @include md {
+      padding:0 2em 0 0;
+      &:last-child {
+        padding-right:0;
+      }
+    }
+    @include lg {
+      padding:0 2em 0 0;
+      &:last-child {
+        padding-right:0;
+      }
+    }
     img{
       width:35px;
       height:35px;
     }
+
   }
 
 }
 
 .logo-sm {
+  color:$c-dark-gray;
+  font-size: 17px;
+  font-family: "Raleway";
   display:block;
   margin-bottom:2em;
   @include md {display:none;}
@@ -162,6 +194,7 @@
 }
 
 .logo {
+  color:$c-dark-gray;
   display:none;
   @include md {display:block;}
   @include lg {display:block;}
@@ -180,6 +213,20 @@
 
 }
 
+img.profile {
+  border-radius: 50%;
+  width:10em;
+  height:10em;
+  float:left;
+  margin-right:1em;
+  margin-top:0.5em;
+  background:$c-primary;
+}
+
 .page {
   margin-top: -0.67em;
+}
+
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+  background-color: $c-primary;
 }

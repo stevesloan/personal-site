@@ -1,0 +1,26 @@
+---
+layout: page
+title: Contact
+---
+
+<form class="pure-form">
+    <fieldset class="pure-group">
+        <input type="text" class="pure-input-1" placeholder="Name">
+        <input type="email" class="pure-input-1" placeholder="Email">
+    </fieldset>
+
+    <fieldset class="pure-group">
+        <textarea class="pure-input-1" placeholder="Comments"></textarea>
+    </fieldset>
+
+    <button type="submit" class="pure-button pure-input-1 pure-button-primary">Send</button>
+</form>
+
+{% contentfor sidebar %}
+<p>
+
+
+  <h1 class="sidebar__h1 slim">Say Hi</h1>
+  <h3 class="sidebar_h2 slim"><a href="mailto:contact@stevesloan.ca">contact@stevesloan.ca</a></h3>
+</p>
+{% endcontentfor %}
