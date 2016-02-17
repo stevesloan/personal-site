@@ -191,7 +191,9 @@ hr {
 
   &__h1 {
     font-size:3em;
-
+    @include md {
+      font-size:2em;
+    }
   }
 
   &__social {
