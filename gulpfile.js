@@ -16,6 +16,8 @@ var reload = browserSync.reload;
 // And define a variable that BrowserSync uses in it"s function
 var bs;
 
+const babel = require('gulp-babel');
+
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
 
@@ -125,7 +127,10 @@ gulp.task("jslint", function () {
 
 gulp.task("scripts", function () {
   gulp.src("./serve/assets/javascript/*.js")
-    .pipe(uglify())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    // .pipe(uglify())
     .pipe(gulp.dest("serve/assets/javascript/"))
 });
 
@@ -149,9 +154,12 @@ gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
 // These tasks will look for files that change while serving and will auto-regenerate or
 // reload the website accordingly. Update or add other files you need to be watched.
 gulp.task("watch", function () {
-  gulp.watch(["src/**/*.md", "src/**/*.html", "src/**/*.xml", "src/**/*.txt", "src/**/*.js"], ["jekyll-rebuild"]);
+  gulp.watch(["src/**/*.md", "src/**/*.html", "src/**/*.xml", "src/**/*.txt"], ["jekyll-rebuild"]);
   gulp.watch(["serve/assets/stylesheets/*.css"], reload);
   gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
+  gulp.watch(["serve/assets/javascript/*.js"], reload);
+  gulp.watch(["src/assets/javascript/*.js"], ["scripts"]);
+
 });
 
 // Serve the site after optimizations to see that everything looks fine

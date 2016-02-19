@@ -39,9 +39,3 @@ title: Blog
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
-{% contentfor sidebar %}
-<p>
-  <h1 class="sidebar__h1 slim">Hi, I'm<br />Steve Sloan</h1>
-  <h3 class="sidebar_h2 slim">A full stack developer based in Toronto</h3>
-</p>
-{% endcontentfor %}
