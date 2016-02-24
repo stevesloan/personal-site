@@ -157,8 +157,9 @@ gulp.task("watch", function () {
   gulp.watch(["src/**/*.md", "src/**/*.html", "src/**/*.xml", "src/**/*.txt"], ["jekyll-rebuild"]);
   gulp.watch(["serve/assets/stylesheets/*.css"], reload);
   gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
-  gulp.watch(["serve/assets/javascript/*.js"], reload);
   gulp.watch(["src/assets/javascript/*.js"], ["scripts"]);
+  gulp.watch(["serve/assets/javascript/*.js"], reload);
+
 
 });
 

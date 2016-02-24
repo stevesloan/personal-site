@@ -12,7 +12,7 @@
     formData.comments = getInput('input-comments');
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://stevesloan.ca/mail.php');
+    xhr.open('POST', 'https://stevesloan.ca/mail.php');
     xhr.responseType = 'json';
 
     xhr.onload = function () {
@@ -22,7 +22,7 @@
     xhr.onerror = function () {
       console.log('xhr fail');
     };
-
+    //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(formData));
 
     // fetch('https://stevesloan.ca/mail.php')
@@ -39,6 +39,7 @@
       let input = document.getElementById(id).value;
       return input;
     } catch (e) {
+      // TODO: store id along with error message
       return false;
     }
   }
