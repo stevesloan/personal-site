@@ -12,7 +12,7 @@
     formData.comments = getInput('input-comments');
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://stevesloan.ca/mail.php');
+    xhr.open('POST', 'https://stevesloan.ca/mail/stevesloan2.php');
     xhr.responseType = 'json';
 
     xhr.onload = function () {
