@@ -17,10 +17,16 @@
 
     xhr.onload = function () {
       console.log(xhr.response);
+      if (xhr.response.success) {
+        notify('Message Sent');
+      } else {
+        notify('Message failed to send.');
+      }
     };
 
     xhr.onerror = function () {
       console.log('xhr fail');
+      notify('Message failed to send.');
     };
     //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(formData));
@@ -33,6 +39,28 @@
     return false;
 
   }, false);
+
+  function notify(text) {
+    var cont = document.getElementById('notify');
+    var message = document.createElement("div");
+    message.innerHTML = text;
+    message.className = 'notify__message';
+    cont.appendChild(message);
+
+    //delay active class to enable animation
+    setTimeout(function() {
+      message.className = 'notify__message notify--active';
+    },10)
+
+    //remove after 4-5 seconds
+    setTimeout(function() {
+      message.className = 'notify__message';
+    },4000)
+    setTimeout(function() {
+      message.remove();
+    },5000)
+
+  }
 
   function getInput(id) {
     try {
