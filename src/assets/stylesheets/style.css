@@ -108,9 +108,12 @@ a {
   color: #fff;
   display: inline-block;
   background-image: url("../images/hatch.svg");
-  border: 1px solid #ff6c00; }
+  border: 0px solid #ff6c00; }
   .btn--right {
     float: right; }
+
+.btn:active {
+  background-color: #cc5600; }
 
 hr {
   height: 0;

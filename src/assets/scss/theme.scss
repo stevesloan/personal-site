@@ -53,11 +53,15 @@ a {
   color:$c-white;
   display:inline-block;
   background-image: url('../images/hatch.svg');
-  border:1px solid $c-secondary;
+  border:0px solid $c-secondary;
   &--right {
     float:right;
 
   }
+}
+.btn:active {
+  
+  background-color:darken($c-secondary,10%);
 }
 
 hr {
