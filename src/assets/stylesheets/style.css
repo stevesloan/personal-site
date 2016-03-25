@@ -86,6 +86,8 @@ a {
 .profile-pic {
   border-radius: 50%;
   background-color: #47a1c3;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
   background-image: url("../images/hatch.svg");
   background-attachment: fixed;
   width: 200px;
@@ -94,9 +96,9 @@ a {
   margin-top: 0; }
 
 .profile-pic__image {
-  width: 100%;
-  margin-top: -10px;
-  margin-left: -10px; }
+  height: 100%;
+  margin: 0 auto;
+  display: block; }
 
 .btn {
   background-color: #ff8933;
@@ -129,7 +131,7 @@ hr {
       text-align: left; } }
 
 .sidebar-inner {
-  background-image: url("../images/SteveSloan.png");
+  background-image: url("../images/polyPortrait.svg");
   background-attachment: fixed; }
 
 .sidebar {
@@ -208,21 +210,24 @@ hr {
       border-bottom: 1px solid #fff; }
   .sidebar__hero--ghost {
     position: absolute;
-    -webkit-transform: scaleX(-1) translate(0%, 0%);
-    transform: scaleX(-1) translate(0%, 0%);
-    opacity: .5;
+    -webkit-transform: translate(30%, 0%);
+    transform: translate(30%, 0%);
+    width: 80%;
+    opacity: .3;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
     top: 0;
     right: 0; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .sidebar__hero--ghost {
-        width: 160%;
-        -webkit-transform: scaleX(-1) translate(-30%, 0%);
-        transform: scaleX(-1) translate(-30%, 0%); } }
+        width: 210%;
+        -webkit-transform: translate(50%, 0%);
+        transform: translate(50%, 0%); } }
     @media (min-width: 1024px) {
       .sidebar__hero--ghost {
-        width: 120%;
-        -webkit-transform: scaleX(-1) translate(-30%, 0%);
-        transform: scaleX(-1) translate(-30%, 0%); } }
+        width: 160%;
+        -webkit-transform: translate(40%, 0%);
+        transform: translate(40%, 0%); } }
   .sidebar__botom {
     position: relative;
     margin: auto; }

@@ -132,6 +132,7 @@ gulp.task("scripts", function () {
     }))
     // .pipe(uglify())
     .pipe(gulp.dest("serve/assets/javascript/"))
+    .pipe(reload({stream: true}));
 });
 
 // Runs "jekyll doctor" on your site to check for errors with your configuration
@@ -157,8 +158,9 @@ gulp.task("watch", function () {
   gulp.watch(["src/**/*.md", "src/**/*.html", "src/**/*.xml", "src/**/*.txt"], ["jekyll-rebuild"]);
   gulp.watch(["serve/assets/stylesheets/*.css"], reload);
   gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
+  // gulp.watch(["serve/assets/javascript/*.js"], reload);
   gulp.watch(["src/assets/javascript/*.js"], ["scripts"]);
-  gulp.watch(["serve/assets/javascript/*.js"], reload);
+
 
 
 });

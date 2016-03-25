@@ -31,6 +31,7 @@ a {
 .profile-pic {
   border-radius: 50%;
   background-color:$c-primary;
+  transform: scaleX(-1);
   background-image: url('../images/hatch.svg');
   background-attachment: fixed;
   width:200px;
@@ -39,9 +40,10 @@ a {
   margin-top:0;
 }
 .profile-pic__image {
-  width:100%;
-  margin-top:-10px;
-  margin-left:-10px;
+  height:100%;
+  margin:0 auto;
+
+  display:block;
 }
 .btn {
   background-color:lighten($c-secondary,10%);
@@ -84,7 +86,7 @@ hr {
 }
 
 .sidebar-inner {
-  background-image: url('../images/SteveSloan.png') ;
+  background-image: url('../images/polyPortrait.svg') ;
   background-attachment: fixed;
 }
 .sidebar {
@@ -169,17 +171,22 @@ hr {
 
     &--ghost {
       position:absolute;
-      transform: scaleX(-1)  translate(0%,0%);
-      opacity:.5;
+      // transform: scaleX(-1)  translate(0%,0%);
+      transform: translate(30%,0%);
+      width:80%;
+      opacity:.3;
+      filter: blur(10px);
       top:0;
       right:0;
       @include md {
-        width:160%;
-        transform: scaleX(-1)  translate(-30%,0%);
+        width:210%;
+        // transform: scaleX(-1)  translate(-30%,0%);
+        transform: translate(50%,0%);
       }
       @include lg {
-        width:120%;
-        transform: scaleX(-1)  translate(-30%,0%);
+        width:160%;
+        // transform: scaleX(-1)  translate(-30%,0%);
+        transform: translate(40%,0%);
       }
     }
   }
