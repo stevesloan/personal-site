@@ -4,41 +4,45 @@
   // TODO: validate and produce error message.
   // finish testing server communication.
 
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    let formData = {};
-    formData.name = getInput('input-name');
-    formData.email = getInput('input-email');
-    formData.comments = getInput('input-comments');
+  let form = document.getElementById('contact-form');
+  if(form !== null) {
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://stevesloan.ca/mail/stevesloan3.php');
-    xhr.responseType = 'json';
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      let formData = {};
+      formData.name = getInput('input-name');
+      formData.email = getInput('input-email');
+      formData.comments = getInput('input-comments');
 
-    xhr.onload = function () {
-      console.log(xhr.response);
-      if (xhr.response.success) {
-        notify('Message Sent');
-      } else {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://stevesloan.ca/mail/stevesloan3.php');
+      xhr.responseType = 'json';
+
+      xhr.onload = function () {
+        console.log(xhr.response);
+        if (xhr.response.success) {
+          notify('Message Sent');
+        } else {
+          notify('Message failed to send.');
+        }
+      };
+
+      xhr.onerror = function () {
+        console.log('xhr fail');
         notify('Message failed to send.');
-      }
-    };
+      };
+      //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xhr.send(JSON.stringify(formData));
 
-    xhr.onerror = function () {
-      console.log('xhr fail');
-      notify('Message failed to send.');
-    };
-    //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify(formData));
+      // fetch('https://stevesloan.ca/mail.php')
+      // .then(res => res.json())
+      // .then(console.log)
+      // .catch(console.warn);
 
-    // fetch('https://stevesloan.ca/mail.php')
-    // .then(res => res.json())
-    // .then(console.log)
-    // .catch(console.warn);
+      return false;
 
-    return false;
-
-  }, false);
+    }, false);
+  }
 
   function notify(text) {
     var cont = document.getElementById('notify');
