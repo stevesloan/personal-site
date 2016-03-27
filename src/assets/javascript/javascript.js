@@ -3,9 +3,9 @@
 
   // TODO: validate and produce error message.
   // finish testing server communication.
-
+// alert('test');
   let form = document.getElementById('contact-form');
-  if(form !== null) {
+  if (form !== null) {
 
     form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -31,6 +31,7 @@
         console.log('xhr fail');
         notify('Message failed to send.');
       };
+
       //xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       xhr.send(JSON.stringify(formData));
 
@@ -46,7 +47,7 @@
 
   function notify(text) {
     var cont = document.getElementById('notify');
-    var message = document.createElement("div");
+    var message = document.createElement('div');
     message.innerHTML = text;
     message.className = 'notify__message';
     cont.appendChild(message);

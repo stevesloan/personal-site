@@ -126,12 +126,13 @@ gulp.task("jslint", function () {
 });
 
 gulp.task("scripts", function () {
-  gulp.src("./serve/assets/javascript/*.js")
+  gulp.src("./src/assets/javascript/*.js")
     .pipe(babel({
       presets: ['es2015']
     }))
-    // .pipe(uglify())
+    .pipe($.uglify())
     .pipe(gulp.dest("serve/assets/javascript/"))
+    .pipe($.size({title: "optimizations"}))
     .pipe(reload({stream: true}));
 });
 
@@ -185,7 +186,7 @@ gulp.task("check", ["jslint", "doctor"], function () {
 });
 
 // Builds the site but doesn"t serve it to you
-gulp.task("build", ["jekyll:prod", "styles"], function () {});
+gulp.task("build", ["jekyll:prod", "styles", "scripts"], function () {});
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
