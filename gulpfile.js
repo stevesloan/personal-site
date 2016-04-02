@@ -15,6 +15,7 @@ var merge = require("merge-stream");
 var reload = browserSync.reload;
 // And define a variable that BrowserSync uses in it"s function
 var bs;
+var run = require('run-sequence');
 
 const babel = require('gulp-babel');
 
@@ -26,15 +27,24 @@ gulp.task("clean:prod", del.bind(null, ["site"]));
 
 // Runs the build command for Jekyll to compile the site locally
 // This will build the site with the production settings
-gulp.task("jekyll:dev", $.shell.task("jekyll build"));
+gulp.task("jekyll:dev", function() {
+  $.shell.task("jekyll build");
+  run(["scripts","styles"]);
+});
+
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
+  // run(["scripts","styles"]);
   reload;
 });
 
 // Almost identical to the above task, but instead we load in the build configuration
 // that overwrites some of the settings in the regular configuration so that you
 // don"t end up publishing your drafts or future posts
-gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
+gulp.task("jekyll:prod", function() {
+
+  $.shell.task("jekyll build --config _config.yml,_config.build.yml");
+  run(["scripts","styles"]);
+});
 
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
 gulp.task("styles", function () {
@@ -47,7 +57,7 @@ gulp.task("styles", function () {
       cascade: false
     }))
     // Directory your CSS file goes to
-    .pipe(gulp.dest("src/assets/stylesheets/"))
+    // .pipe(gulp.dest("src/assets/stylesheets/"))
     .pipe(gulp.dest("serve/assets/stylesheets/"))
     // Outputs the size of the CSS file
     .pipe($.size({title: "styles"}))
@@ -143,7 +153,7 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
+gulp.task("serve:dev", ["jekyll:dev"], function () {
   bs = browserSync({
     notify: true,
     // tunnel: "",
@@ -157,11 +167,14 @@ gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
 // reload the website accordingly. Update or add other files you need to be watched.
 gulp.task("watch", function () {
   gulp.watch(["src/**/*.md", "src/**/*.html", "src/**/*.xml", "src/**/*.txt"], ["jekyll-rebuild"]);
+// jekyll-rebuild
   gulp.watch(["serve/assets/stylesheets/*.css"], reload);
   gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
   // gulp.watch(["serve/assets/javascript/*.js"], reload);
   gulp.watch(["src/assets/javascript/*.js"], ["scripts"]);
 
+  // gulp.watch(["serve/assets/scss/**/*.scss"], ["styles"]);
+  // gulp.watch(["serve/assets/javascript/*.js"], ["scripts"]);
 
 
 });
