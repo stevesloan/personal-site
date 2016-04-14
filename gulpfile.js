@@ -16,6 +16,7 @@ var reload = browserSync.reload;
 // And define a variable that BrowserSync uses in it"s function
 var bs;
 var run = require('run-sequence');
+var cleanCSS = require('gulp-clean-css');
 
 const babel = require('gulp-babel');
 
@@ -27,9 +28,11 @@ gulp.task("clean:prod", del.bind(null, ["site"]));
 
 // Runs the build command for Jekyll to compile the site locally
 // This will build the site with the production settings
-gulp.task("jekyll:dev", function() {
-  $.shell.task("jekyll build");
-  run(["scripts","styles"]);
+gulp.task("jekyll:dev", $.shell.task("jekyll build"));
+
+gulp.task('buildInOrder:dev', function () {
+  run(["jekyll:dev"])
+  .pipe(run(["scripts","styles"]));
 });
 
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
@@ -49,14 +52,14 @@ gulp.task("jekyll:prod", function() {
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
 gulp.task("styles", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
-  return gulp.src("src/assets/scss/style.scss")
+  gulp.src("src/assets/scss/style.scss")
     .pipe($.sass())
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    // Directory your CSS file goes to
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     // .pipe(gulp.dest("src/assets/stylesheets/"))
     .pipe(gulp.dest("serve/assets/stylesheets/"))
     // Outputs the size of the CSS file
@@ -153,7 +156,7 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["jekyll:dev"], function () {
+gulp.task("serve:dev", ["buildInOrder:dev"], function () {
   bs = browserSync({
     notify: true,
     // tunnel: "",

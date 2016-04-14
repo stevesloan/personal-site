@@ -4,23 +4,19 @@ title: Contact
 ---
 
 <form class="pure-form" id="contact-form">
-    <fieldset class="pure-group">
-        <input type="text" name="name" class="pure-input-1" id="input-name" placeholder="Name" required>
-        <input type="email" name="email" class="pure-input-1" id="input-email" placeholder="Email" required>
-    </fieldset>
-
-    <fieldset class="pure-group">
-        <textarea class="pure-input-1" name="Comments" id="input-comments" placeholder="Comments" required></textarea>
-    </fieldset>
-
-
-    <button class="btn pure-input-1-4" type="submit">SEND</button>
+  <div class="loading__spinner"></div>
+  <fieldset class="pure-group">
+    <input type="text" name="name" class="pure-input-1" id="input-name" placeholder="Name" required>
+    <input type="email" name="email" class="pure-input-1" id="input-email" placeholder="Email" required>
+  </fieldset>
+  <fieldset class="pure-group">
+    <textarea class="pure-input-1" name="Comments" id="input-comments" placeholder="Comments" required></textarea>
+  </fieldset>
+  <button class="btn pure-input-1-4" type="submit">SEND</button>
 </form>
 
 {% contentfor sidebar %}
 <p>
-
-
   <h1 class="sidebar__h1 slim">Say Hi</h1>
   <h3 class="sidebar_h2 slim"><a href="mailto:contact@stevesloan.ca">contact@stevesloan.ca</a></h3>
 </p>

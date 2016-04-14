@@ -19,6 +19,9 @@ author:
   github: stevesloan
   linkedin: stevensloan
 
+sass:
+  sass_dir: "scss"
+
 # general setting for Jekyll
 # googleAnalytics: `UA-XXXXX-X`
 

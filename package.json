@@ -13,6 +13,7 @@
     "gulp-cache": "^0.4.0",
     "gulp-cached": "^1.0.1",
     "gulp-changed": "^1.0.0",
+    "gulp-clean-css": "^2.0.4",
     "gulp-filter": "^3.0.1",
     "gulp-gzip": "^1.2.0",
     "gulp-htmlmin": "^1.2.0",
