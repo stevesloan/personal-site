@@ -31,8 +31,13 @@ gulp.task("clean:prod", del.bind(null, ["site"]));
 gulp.task("jekyll:dev", $.shell.task("jekyll build"));
 
 gulp.task('buildInOrder:dev', function () {
-  run(["jekyll:dev"])
-  .pipe(run(["scripts","styles"]));
+  // TODO get this to not throw error. these 2 lines are intended to stop jekyll
+  // from overwriting my gulp watch scss output
+  // run(["jekyll:dev"])
+  // .pipe(run(["scripts","styles"]));
+
+  $.shell.task("jekyll build");
+  run(["scripts","styles"]);
 });
 
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
