@@ -3,8 +3,8 @@
 ##My personal site for stevesloan.ca
 
 #Dependancies
-* python
-* pip install jekyll bundle redcarpet
+* ruby
+* gem install jekyll bundle redcarpet
 
 #Installation
 * npm install
