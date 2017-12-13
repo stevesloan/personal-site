@@ -36,7 +36,7 @@ gulp.task('buildInOrder:dev', function () {
   // run(["jekyll:dev"])
   // .pipe(run(["scripts","styles"]));
 
-  $.shell.task("jekyll build");
+  $.shell.task("bundle exec jekyll build");
   run(["scripts","styles"]);
 });
 

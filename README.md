@@ -9,8 +9,7 @@
 #Installation
 * npm install
 * bundle install
-* gulp
+* npm start
 
 #To fix error messages try: 
 * delete gemfile.lock
-* also try command: bundle exec jekyll serve
