@@ -2,7 +2,7 @@ mercurial==3.7.1
 py==1.4.30
 pygobject==3.18.2
 requests==2.8.1
-urllib3==1.12
+urllib3==1.24.2
 vboxapi==1.0
 virtualenv==13.1.2
 wheel==0.24.0
